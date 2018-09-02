@@ -1,0 +1,51 @@
+
+  <div class="topbar">
+      <h2> Todo App ({{count}} / {{todos.length}})</h2>
+  </div>
+ <!-- <div class>
+      <label>Search for: <input [(ngModel)]="searchTerm"></label>
+  </div> -->
+  <div class="popupbox" *ngIf="editedTodo !== undefined">
+    <br>
+    <input type="text" placeholder="Description"
+   [(ngModel)]="editedTodo.description">
+   <br>
+    <select [(ngModel)]="editedTodo.category">
+        <option value="" disabled selected>Select a Category</option>
+      <option *ngFor="let cat of categories" [value]="cat.name">{{cat.name}}</option>
+    </select>
+    <br>
+    <button (click)=saveTodo(editedTodo)> Save</button>
+    <button (click)="editedTodo=undefined"> Cancel</button>
+   
+
+  </div>
+  <div class="main">
+  <table>
+    <tr *ngFor="let todo of todos"
+     [ngClass]="{'jobtodo': todo.category=='jobs',
+                'revivetodo':todo.category=='revive'}"> 
+      <!-- <td>{{todo.done?'DONE':'PENDING'}} </td> -->
+      <td id="donecol"><i class="fas fa-check"(click)="todo.done=!todo.done; editTodo(todo); saveTodo()" *ngIf="todo.done" ></i>
+        <div class="emptybox" (click)="todo.done=!todo.done; editTodo(todo); saveTodo()" *ngIf="!todo.done"></div></td>
+      <td id="descol">{{todo.description}}</td>
+      <td>{{todo.category}} </td>
+      <td>{{todo.order}} </td>
+      <td><a href (click)="editTodo(todo)">edit &#9998;</a></td>
+      <!-- <td>{{ todo.id }}</td> -->
+      <td (click)="deleteTodo(todo)">x</td>
+    </tr>
+  </table>
+  </div>
+  
+  <button class="btnround" (click)="createTodo()"> Add a Todo </button>
+
+  <button (click)="countDones()"> Count Done Todos</button>
+
+  <br>
+  <!-- {{count}}
+  {{todos | json}}
+   -->
+  
+
+  

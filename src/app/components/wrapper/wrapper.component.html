@@ -1,9 +1,14 @@
 <div class="flex-container">
-    <div class="toolbar">
+    <div class="toolbar" >
+        <!-- <button (click)="addToDo() "> Add Todo </button>  -->
+        <!-- <button (click)="listComponent.addTodo() "> Add Todo </button>  -->
         <i (click)="showAbout=true" class="fas fa-info"></i>
     </div>
     <div class="panel">
-        <!-- put here your component -->
+        <app-list  #todoList>
+                
+         </app-list>
+         
     </div>
     <div class="about" *ngIf="showAbout">
         <p>This is the final project of<br><br><strong>[YOUR NAME HERE]</strong><br><br>as [HER/HIS] participation in
@@ -15,4 +20,5 @@
            To <strong>contact REvive Greece</strong> use <a href="mailto:info@revivegreece.org">info@revivegreece.org</a></p>
         <p><i (click)="showAbout=false" class="fas fa-times close"></i></p>
     </div>
+    
 </div>

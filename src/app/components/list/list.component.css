@@ -1,0 +1,60 @@
+table{border: 1px solid black;
+        border-collapse: collapse;
+        width: 80%;
+        background-color: azure;
+        float: right;
+        top:-50px;
+        }
+        td{border: 1px solid black;
+                border-collapse: collapse;}
+th {border: 2px solid black;
+    border-collapse: collapse;}
+i {width:10%; display:block; color:green; text-align: center; }
+
+.active {visibility: visible;}
+.addToDo input,select{background-color: khaki;}
+/* .jobtodo{}
+.revivetodo{} */
+
+.emptybox{border:1px solid black; 
+        width:10px;
+        height:10px;} 
+#donecol{width:10%;
+        text-align: center;}
+#descol{width:60%;}
+.btnround{border-radius: 40%;
+        border:2px solid whitesmoke;
+        background-color: brown;
+        color:khaki;
+        padding: 8px;
+        text-align: center;
+        text-decoration: none;
+        position:absolute;
+        left:0px;
+        top:50%;
+        width:15%;
+        /* display: inline-block; */
+        font-size: 20px;
+        margin: 10px;
+        padding: 8px 2px;
+        font-size: 14px;
+}
+ .popupbox{display: block;
+        background-color:brown;
+        position:absolute;
+        left:18%;
+        top:50%;
+        width:50%;
+        height:40%;
+        text-align: center;
+        
+} 
+.popupbox button,input{
+        background-color: khaki;
+       
+}
+
+
+/* .topbar{width: 18%;}
+input{width:70%;} */
+/* body{ background-image:} */

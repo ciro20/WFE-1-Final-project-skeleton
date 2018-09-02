@@ -5,18 +5,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { ListComponent } from './components/list/list.component';
+import { TodolistService } from './services/todolist.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    WrapperComponent
+    WrapperComponent,
+    ListComponent,
+  
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,  
   ],
-  providers: [],
+  providers: [TodolistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

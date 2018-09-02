@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TodolistService } from '../../services/todolist.service';
+import { ListComponent } from '../list/list.component';
+//import { Job } from '../models/job';
 
 @Component({
   selector: 'app-wrapper',
@@ -7,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrapperComponent implements OnInit {
 
-  constructor() { }
+@ViewChild('todoList')
+listComponent: ListComponent;
 
+  constructor( private todolistservice: TodolistService ) { ;}
+
+ 
   ngOnInit() {
   }
 
